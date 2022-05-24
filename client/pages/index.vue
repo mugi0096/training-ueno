@@ -1,6 +1,7 @@
 /* eslint-disable object-shorthand */
 <template>
   <div>
+    <Footer />
     <h1>Test</h1>
     <ul>
       <li v-for="article in articles" :key="article.id">
@@ -15,8 +16,12 @@
 
 <script lang="ts">
 import Article from '../types/article';
+import Footer from '../components/Footer.vue';
 export default {
   name: 'IndexPage',
+  components: {
+    Footer: Footer
+  },
   data(): {
     articles: Article[],
   } {
