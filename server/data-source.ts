@@ -1,5 +1,5 @@
-import "reflect-metadata"
-import { DataSource } from "typeorm"
+import { DataSource } from "typeorm";
+import { Article } from "./entity/Article";
 
 export const AppDataSource = new DataSource({
     type: "mysql",
@@ -10,7 +10,9 @@ export const AppDataSource = new DataSource({
     database: "blog_typeorm",
     synchronize: false,
     logging: false,
-    entities: ["src/entity/**/*.ts"],
-    migrations: ["src/migration/**/*.ts"],
+    // entities: ["src/entity/**/*.ts"],
+    // entities: [ "../entity/Article.ts" ],
+    entities: [ Article ],
+    migrations: ["server/migration/**/*.ts"],
     subscribers: [],
 })

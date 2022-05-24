@@ -19,7 +19,7 @@ export default {
 
   srcDir: 'client/',
 
-  serverMiddleware: ['~~/myTypeORM/src'],
+  serverMiddleware: ['~~/server'],
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
