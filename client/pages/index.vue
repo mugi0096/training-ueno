@@ -1,8 +1,10 @@
 /* eslint-disable object-shorthand */
 <template>
   <div>
-    <ul class="contents">
+    <h1>Test</h1>
+    <ul>
       <li v-for="article in articles" :key="article.id">
+        <p>{{ article.id }}</p>
         <p>{{ article.title }}</p>
         <p>{{ article.body }}</p>
         <p>{{ article.thumbnailPath }}</p>
@@ -11,24 +13,24 @@
   </div>
 </template>
 
-<script>
-import getAllArticles from '../api/getAllArticles';
+<script lang="ts">
+import Article from '../types/article';
 export default {
   name: 'IndexPage',
-  data() {
+  data(): {
+    articles: Article[],
+  } {
     return {
-      articles: null,
-      loading: true,
+      articles: [
+        {
+          id: 1,
+          title: "Blog",
+          body: "blog content",
+          thumbnailPath: "/aaa/a",
+          isDist: true,
+        }
+      ]
     }
   },
-  mounted() {
-    this.getAllArticles("http://localhost:3000/api/articles/")
-  },
-  methods: {
-    async getAllArticles(url) {
-      this.articles = await getAllArticles.getAllArticles(url);
-      this.loading = false;
-    }
-  }
 }
 </script>

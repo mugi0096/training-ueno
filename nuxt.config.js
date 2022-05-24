@@ -19,8 +19,6 @@ export default {
 
   srcDir: 'client/',
 
-  serverMiddleware: ['~~/server'],
-
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
