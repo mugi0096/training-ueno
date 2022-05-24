@@ -8,7 +8,7 @@
         <p>{{ article.id }}</p>
         <p>{{ article.title }}</p>
         <p>{{ article.body }}</p>
-        <p>{{ article.thumbnailPath }}</p>
+        <Card />
       </li>
     </ul>
     <Footer />
@@ -19,11 +19,13 @@
 import Article from '../types/article';
 import Header from '../components/Header.vue';
 import Footer from '../components/Footer.vue';
+import Card from '../components/Card.vue';
 export default {
   name: 'IndexPage',
   components: {
     Header: Header,
     Footer: Footer,
+    Card: Card,
   },
   data(): {
     articles: Article[],
