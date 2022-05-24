@@ -1,7 +1,7 @@
 /* eslint-disable object-shorthand */
 <template>
-  <div>
-    <Footer />
+  <v-app>
+    <Header />
     <h1>Test</h1>
     <ul>
       <li v-for="article in articles" :key="article.id">
@@ -11,16 +11,19 @@
         <p>{{ article.thumbnailPath }}</p>
       </li>
     </ul>
-  </div>
+    <Footer />
+  </v-app>
 </template>
 
 <script lang="ts">
 import Article from '../types/article';
+import Header from '../components/Header.vue';
 import Footer from '../components/Footer.vue';
 export default {
   name: 'IndexPage',
   components: {
-    Footer: Footer
+    Header: Header,
+    Footer: Footer,
   },
   data(): {
     articles: Article[],

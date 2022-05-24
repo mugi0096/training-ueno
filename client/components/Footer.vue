@@ -1,8 +1,11 @@
 <template>
-  <v-toolbar
-    color="white"
-    elevation="3"
-  ></v-toolbar>
+  <v-footer>
+    <div class="d-flex flex-column mb-6">
+      <div>COMPANY LOGO</div>
+      <div>BLOG</div>
+      <div>&copy; Copyright</div>
+    </div>
+  </v-footer>
 </template>
 
 <script>
